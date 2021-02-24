@@ -27,11 +27,16 @@ class Sally(Cat):
     def sing(self, sounds):
         return f'{sounds}'
 
-#1 Add nother Cat
-another_cat = Cat('Willy', 2) 
-#2 Create a list of all of the pets (create 3 cat instances from the above)
-my_cats = []
+#1 adding another cat
+class Willy(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
 
-#3 Instantiate the Pet class with all your cats use variable my_pets
+#2 Creating a list of all the pets
+my_cats = [Simon('Simon', 4), Sally('Sally', 3), Willy('Willy', 8)]
 
-#4 Output all of the cats walking using the my_pets instance
+#3 Instantiating the Pet class
+my_pets = Pets(my_cats)
+
+#4 Output all of the cats walking
+my_pets.walk()
